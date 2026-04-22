@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { submitWriting } from "@/app/actions/submissions";

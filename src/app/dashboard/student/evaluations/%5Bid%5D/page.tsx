@@ -4,6 +4,8 @@ import { evaluations, submissions, prompts } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 export default async function EvaluationDetailPage({ params }: { params: { id: string } }) {
   // Fetch detailed evaluation data
   const [evaluation] = await db.select().from(evaluations).where(eq(evaluations.submissionId, params.id));
